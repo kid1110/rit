@@ -1,4 +1,6 @@
 use clap::{Parser, Subcommand};
+use rit::commands;
+use rit::models;
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
@@ -15,7 +17,7 @@ fn main() {
     let cli = Cli::parse();
     match &cli.command {
         Some(Commands::Init) => {
-            println!("Hello world");
+            let _ = commands::init();
         }
         None => {}
     }

@@ -16,6 +16,6 @@ pub fn init() -> io::Result<()> {
     fs::create_dir_all(repo_path.join("objects"))?;
     fs::create_dir_all(repo_path.join("refs"))?;
     fs::write(repo_path.join("HEAD"), "ref: refs/heads/main\n")?;
-    println!("Initialized rit directory");
+    println!("Initialized empty Rit repository in {}",dir.display());
     Ok(())
 }

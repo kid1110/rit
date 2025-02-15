@@ -35,6 +35,11 @@ impl Blob {
 
 #[cfg(test)]
 mod test {
+    use super::Blob;
+
     #[test]
-    fn test_new_blob() {}
+    fn test_new_blob() {
+        let t = Blob::new("hello world");
+        assert_eq!(t.get_data(), "hello world");
+    }
 }
